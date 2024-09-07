@@ -1,0 +1,18 @@
+Note: Codel model file loading path is 
+Note: Compatibility modes selected: ps lt a
+Circuit: KiCad schematic
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+ Reference value :  0.00000e+00
+No. of Data Rows : 1
+
+
+Simulation results:
+
+I(r2):                    1.66667mA
+I(r1):                    1.66667mA
+I(v1):                    -1.66667mA
+P(v1):                    -8.33333mW
+V(+5v):                   5V
+P(r1):                    2.77778mW
+V(net-_r1-pad2_):         3.33333V
+P(r2):                    5.55556mW
