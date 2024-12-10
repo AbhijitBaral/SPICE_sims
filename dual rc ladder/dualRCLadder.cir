@@ -1,0 +1,7 @@
+.title Dual RC Ladder
+R1 2 1 10k
+R2 out 2 1k
+V1 1 GND dc 0 PULSE( 0 5 1u 1u 1u 1 1 ) 
+C2 out GND 100n
+C1 2 GND 1u
+.end

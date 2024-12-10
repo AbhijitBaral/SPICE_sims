@@ -1,0 +1,5 @@
+voltage_divider_netlist
+V1 mid 0 1 
+R1 mid out 1k
+R2 out GND 2k
+.end
