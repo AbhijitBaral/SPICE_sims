@@ -1,0 +1,7 @@
+.title peak_rectifier with resistor
+.model __D1 D
+V1 in GND DC 0 SIN( 0 1 1k 0 0 0 ) AC 1  
+D1 in out __D1
+C1 out GND 10n
+R1 out GND 100
+.end
