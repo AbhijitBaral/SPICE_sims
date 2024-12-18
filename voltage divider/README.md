@@ -1,6 +1,6 @@
 # Voltage divider simulated in ngspice  
 
-Simulation command : ```op```
+Simulation command : ```op```  
 Output : 
 ```
 ngspice 3 -> print out
