@@ -3,11 +3,11 @@ Inverting Amplifier with DC Sweep
 .include "/usr/share/kicad/symbols/Simulation_SPICE.sp"
 
 Vin   a 0 DC    0        ; Input voltage source
-Vcc   15 0 DC   12       ; Positive supply voltage
-Vee   -15 0 DC  -12      ; Negative supply voltage
+Vcc   vcc 0 DC   15       ; Positive supply voltage
+Vee   vee 0 DC  -15      ; Negative supply voltage
 R1    in_n a    4.7k     ; Input resistor
 R2    in_n out  47k      ; Feedback resistor
-XU1   0 in_n 15 -15 out kicad_builtin_opamp ; Op-amp instance
+XU1   0 in_n vcc vee out kicad_builtin_opamp ; Op-amp instance
 
 .DC Vin -2 2 0.01     ; Sweep Vin from -2V to +2V
 *.print DC V(out)
