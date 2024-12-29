@@ -1,0 +1,12 @@
+Inverting Amplifier using OpAmp
+
+.include "./generic_opamp.lib"
+
+XU1     GND in- VCC VEE out genopa1
+R2      out in-     20k
+V1      VCC GND     DC 15 
+V3      input GND   DC 0 SIN( 0 1 1k 0 0 0 ) AC 1  
+V2      GND VEE     DC 15 
+R1      in- input   10k
+
+.end

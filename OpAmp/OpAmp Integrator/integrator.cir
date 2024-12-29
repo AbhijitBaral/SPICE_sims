@@ -1,0 +1,15 @@
+OpAmp Integrator
+
+.include "/usr/share/kicad/symbols/Simulation_SPICE.sp"
+
+R1    in- in_src  10k
+Rf    in- out 1M
+*V1    in_src GND DC 1
+*.DC V1 0 3 0.1m
+V1   in_src GND DC 0 SIN( 0 1m 16 0 0 0 ) AC 1
+Vcc   vcc GND     10
+Vee   vee GND     -10
+C1    in- out     4.7u
+XU1 GND in- vcc vee out kicad_builtin_opamp
+
+.end

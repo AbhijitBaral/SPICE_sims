@@ -1,0 +1,15 @@
+OpAmp Differentiator
+
+.include "./generic_opamp.lib"
+
+XU2   in+ in- VCC VEE op genopa1
+V2    VCC GND   DC 15 
+V3    GND VEE   DC 15 
+C2    op in-    0.001u
+C1    in- a     0.01u
+V1    input GND DC 0 SIN( 0 1 1k 0 0 0 ) AC 1  
+R1    a input   1.6k
+R2    GND in+   1.6k
+R3    op in-    16k
+
+.end
