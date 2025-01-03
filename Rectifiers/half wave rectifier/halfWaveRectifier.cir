@@ -1,6 +1,8 @@
-.title Half Wave Rectifier
-.model __D1 D
-R1 out GND 1k
-V1 in GND DC 0 SIN( 0 1 1k 0 0 0 ) AC 1  
-D1 in out __D1 m=0.7
+Half Wave Rectifier
+
+.include ./diode_model.mod
+
+R1 out GND 10k
+V1 in GND DC 0 SIN( 0 10 100 0 0 0 ) AC 1  
+D1 in out DI_1N4007
 .end
