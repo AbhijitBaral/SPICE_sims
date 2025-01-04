@@ -1,0 +1,13 @@
+Bridge rectifier
+
+.include ./diode_model.mod
+
+V1    n1 n2 DC 0 SIN( 0 10 1k 0 0 0 ) AC 10  
+D1    n1 out  DI_1N4007 
+D2    n2 out  DI_1N4007 
+D3    GND n2  DI_1N4007 
+D4    GND n1  DI_1N4007 
+R1    out GND 10k
+
+*.DC V1 -5 5 10m
+.end
