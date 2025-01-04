@@ -5,4 +5,7 @@ Half Wave Rectifier
 R1 out GND 10k
 V1 in GND DC 0 SIN( 0 10 100 0 0 0 ) AC 1  
 D1 in out DI_1N4007
+
+*.DC V1 0 2 0.1m
+
 .end
