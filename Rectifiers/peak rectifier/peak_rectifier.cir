@@ -1,7 +1,9 @@
-.title peak_rectifier
-.model __D1 D
-+         vj=2
-V1 in GND DC 0 SIN( 0 1 1k 0 0 0 ) AC 1  
-D1 in out __D1
-C1 out GND 10f
+Peak_rectifier (Rectifier with a filter capacitor)
+
+.include ./diode_model.mod
+
+V1    in GND    DC 0 SIN( 0 1 200 0 0 0 0 ) AC 10
+D1    in out    DI_1N4007
+C1    out GND   100u
+*R1    out GND   1k
 .end
