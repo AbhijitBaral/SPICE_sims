@@ -1,0 +1,23 @@
+AC Analysis of Wilson current
+
+.include NMOS-180nm.lib
+
+iref1 a gatem2  			    dc 30u
+
+vdd1  a gnd  				    dc 2.5
+vo1   output b  			    ac 5 0
+v_u1  gnd b 				    0
+
+m1    gatem2 common_gate gnd gnd            CMOSN W=2u L=200n M=1
+m3    common_gate common_gate gnd gnd 	    CMOSN W=2u L=200n M=1
+m2    output gatem2 common_gate common_gate CMOSN W=2u L=200n M=1
+
+.ac dec 100 1Hz 10Meg
+
+.control
+run
+plot i(v_u1)
+plot v(output)/i(v_u1)
+.endc
+
+.end

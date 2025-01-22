@@ -1,0 +1,23 @@
+DC Anlaysis of Wilson current
+
+.include NMOS-180nm.lib
+
+iref 	a gatem2  				dc 30u
+
+vdd 	a gnd  					dc 2.5
+vo 	output b  				dc 3
+v_u 	gnd b 					0
+
+m1 	gatem2 common_gate gnd gnd 		CMOSN W=2u L=200n M=1
+m3 	common_gate common_gate gnd gnd 	CMOSN W=2u L=200n M=1
+m2 	output gatem2 common_gate common_gate 	CMOSN W=2u L=200n M=1
+
+.dc vo 0e-00 3e-00 0.1e-03
+
+.control
+run
+plot i(v_u)
+.endc
+
+.end
+
