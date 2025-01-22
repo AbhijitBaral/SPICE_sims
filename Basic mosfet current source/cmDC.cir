@@ -1,0 +1,22 @@
+Basic current mirror
+
+.include NMOS-180nm.lib
+
+m2 	output common_gate gnd gnd 	CMOSN W=2u L=200n M=1
+m1 	common_gate common_gate gnd gnd CMOSN W=2u L=200n M=1
+
+vdd1 	a gnd  				dc 2.5
+v2 	output net-_u1-pad2_  		dc 5
+v_u1 	gnd net-_u1-pad2_ 		0
+
+iref1 	a common_gate  			dc 30u
+
+.dc v2 0e-00 3e-00 0.1e-03
+
+* Control Statements 
+.control
+run
+plot i(v_u1)
+.endc
+
+.end

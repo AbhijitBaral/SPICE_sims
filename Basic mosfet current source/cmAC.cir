@@ -1,0 +1,23 @@
+AC analysis of basic current mirror
+
+.include NMOS-180nm.lib
+
+m1 	common_gate common_gate gnd gnd CMOSN W=2u L=200n M=1
+m2 	output common_gate gnd gnd 	CMOSN W=2u L=200n M=1
+
+v2 	output b  			ac 5m 0
+vdd 	a gnd  				dc 2.5
+v_u 	gnd b 				0
+
+iref a common_gate  dc 30u
+
+.ac dec 1000 1Hz 10Meg
+
+.control
+run
+plot i(v_u)
+plot v(output)/i(v_u)
+.endc
+
+.end
+
